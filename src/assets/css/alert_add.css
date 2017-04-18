@@ -1,0 +1,17 @@
+.alert_add{position: fixed;left: 0;top: 0;overflow: hidden;width: 100%;height: 100%;z-index: 9999;}
+.alert_bottom{opacity: .7;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: black;z-index: 20;}
+.alert_brove{position: fixed;left:50%;top: 50%;background: white;z-index: 22;width: 300px;min-height: 230px;margin-left:-150px;margin-top: -115px;border-radius: 8px;overflow: hidden;}
+.alert_brove p{font-size: 16px;width: 100%; text-align: center;border-bottom: 1px solid #9c9c9c;color: #393939;padding: 10px 0;font-weight: bold;}
+.alert_get{margin:15px 15px 50px;}
+.alert_input{border: 1px solid #9c9c9c;border-radius: 4px;}
+.alert_input input{margin:10px 5px;font-size: 18px;width: 97%;border:none;outline:none;}
+.alert_img{margin-top: 10px;}
+.alert_img ul{overflow: hidden;}
+.alert_img li{float: left;width: 50%;text-align: center;overflow: hidden;}
+.alert_img li img{width: 100%;}
+.alert_img li:nth-child(1){border:1px solid #9c9c9c;border-radius: 4px;}
+.alert_img li:nth-child(2){margin-left: -2px;margin-top: 20px;}
+.alert_img li:nth-child(2) a{text-decoration: underline;}
+.alert_button{position: absolute;bottom: 0;left: 0;width: 100%;overflow: hidden;}
+.alert_button input{width: 50%;text-align: center;background: #d01116;display: inline-block;margin: 0;float: left;height: 45px;color: white;font-weight: bold;font-size:20px;border:0 none;outline:none;border-radius:0;-webkit-box-sizing:border-box;-webkit-appearance:none;}
+.alert_button input:nth-child(2){border-left: 1px solid #cd3839;}

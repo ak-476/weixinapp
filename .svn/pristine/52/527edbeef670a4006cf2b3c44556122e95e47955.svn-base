@@ -1,0 +1,322 @@
+import {MessageBox, Indicator, Toast} from 'mint-ui';
+
+export default {
+  post(url, param, successCallback, errorCallback, _self, isShowIndicator) {
+    if (!isShowIndicator) {
+      Indicator.open({
+        spinnerType: 'fading-circle'
+      });
+    }
+
+    let that = this;
+    let startTime = new Date();
+    _self.$http.post(url, param).then(function (response) {
+      if (!isShowIndicator) {
+        Indicator.close();
+      }
+
+      console.group(url);
+      console.debug("%c参数", "font-weight:bold;color:black;");
+      console.debug(JSON.stringify(param));
+      console.debug("%c返回", "font-weight:bold;color:black;");
+      console.debug(JSON.stringify(response.data).substring(0, 100));
+      console.debug("%c耗时", "font-weight:bold;color:black;");
+      console.debug((new Date().getTime() - startTime) + ' 毫秒');
+      console.groupEnd();
+
+      that.log(JSON.parse(JSON.stringify(response.data.data)));
+
+      switch (response.data.status) {
+        case 200:
+          successCallback && successCallback(response.data.data);
+          break;
+        case 401:
+          // console.log(response.data.msg);
+          // _self.$cookie.set('sid', '');
+          // let reg = new RegExp("(^|&)code=([^&]*)(&|$)");
+          // let r = window.location.search.substr(1).match(reg);
+          // that.getUserSession(_self, (r == null ? null : decodeURI(r[2])));
+          break;
+        case 4000:
+          that.showMsgBox(response.data.msg);
+          break;
+        case 4001:
+        case 4002:
+          that.showMsgBoxThen(response.data.msg, () => {
+            window.location.href = '/v2/business/pay/openMember?fullPath=' + _self.$route.fullPath
+              + '&userStatus=' + response.data.data.userStatus;
+          });
+          // _self.$router.replace({name: 'openMember', query: {
+          //   fullPath: _self.$route.fullPath,
+          //   pathName: _self.$route.name,
+          //   userStatus: response.data.data.userStatus
+          // }});
+          break;
+        default:
+          that.showMsgBox(response.data.msg);
+          errorCallback && errorCallback();
+          break;
+      }
+
+      /* /!** 成功 *!/
+       public static final Integer SUCCESS = 200;
+       /!** 失败 *!/
+       public static final Integer FAIL = 500;
+       /!** 重定向 *!/
+       public static final Integer MOVED = 301;
+       /!** 未授权 *!/
+       public static final Integer UNAUTH = 401;
+       /!** 次数被限制 *!/
+       public static final Integer UNAUTH_COUNT = 402;
+       /!** 未授权_未付费 *!/
+       public static final Integer UNAUTH_UNPAY = 4002;
+       /!** 未授权_未认证 *!/
+       public static final Integer UNAUTH_UNAUTH = 4001;
+       /!** 未授权_未关注 *!/
+       public static final Integer UNAUTH_UNSUBSCRIBE = 4000;
+
+       /!** 状态 200：成功 *!/
+       private Integer status;
+       /!** 消息提示 *!/
+       private String msg;
+       /!** 响应数据 *!/
+       private Object data;
+       /!** 响应数据扩展 *!/
+       private Object extras;*/
+    }).catch(function (response) {
+      switch (response.status) {
+        case 0: // 网络不通
+          //this.toast('warning', '网络暂时未能连通')
+          break
+        case 401: // 未登录
+        case 521: // 超时
+          break;
+        case 500:
+          that.showMsgBox('服务器异常,请稍候再试');
+          Indicator.close();
+          break;
+        case 522: // 错误
+                  //this.init();
+          break
+        case 523:
+          //this.toast('danger', '当前时间存在较大偏差')
+          break
+        case 524:
+          //this.toast('danger', '未找到相关数据')
+          break
+        default:
+          // 其它错误，暂不处理
+          break
+      }
+    })
+  },
+
+  ajaxError(response) {
+    switch (response.status) {
+      case 0: // 网络不通
+        this.showMsgBox('网络暂时未能连通');
+        break;
+      case 401: // 未登录
+      case 521: // 超时
+        this.showMsgBox('网络超时');
+        break;
+      case 522: // 错误
+        break;
+      case 523:
+        this.showMsgBox('当前时间存在较大偏差');
+        break;
+      case 524:
+        this.showMsgBox('未找到相关数据');
+        break;
+      default:
+        this.showMsgBox('服务器异常');
+        break
+    }
+  },
+
+  getUserSession(self, code) {
+    if (code) {
+      self.post(self._Api.POST_COMMON_GET_SEESION, {code: code}, (data) => {
+          self.$cookie.set('sid', data.sessionId);
+          window.location.href = location.href;
+        }, (data) => {
+
+        }, self, true);
+    } else {
+      //window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx30a4b758b4852f88&redirect_uri=" + location.href + "&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
+      window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx30a4b758b4852f88&redirect_uri=" + escape(location.href) + "&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
+      //self.setLocalStorage(self._Api.LOCAL_STORAGE_AUTH_LOGIN_FLAG, true);
+    }
+
+  },
+
+  getUserLog(successCallback, errorCallback, self) {
+    this.post(self._Api.POST_WXAUTH_USER_LOG, {}, (data) => {
+      if (data.verifyStatus) {
+        errorCallback && errorCallback(data);
+      } else {
+        successCallback && successCallback(data);
+      }
+    }, () => {
+
+    }, self, true)
+  },
+
+  getUserStatus(self, successCallback, errorCallback, nextParams, standard) {
+    // /** 未认证 */
+    // NO_AUTH(0, "未认证"),
+    //   /** 已认证 */
+    //   AUTH(1, "已认证"),
+    //   /** 已付费 */
+    //   VIP(2, "已付费");
+    this.post(self._Api.POST_USER_STATUS, {}, (data) => {
+      this.setLocalStorage('AUTH_PAY_PARAMS', nextParams);
+      switch (data.userStatus) {
+        case 0:
+          if (standard == 2) {
+            // this.showMsgBoxConfirm('对不起，只有付费会员才能查看！您还未认证，请您先完成认证！', action => {
+            //   if (action) {
+                //认证 + 开通会员
+                nextParams.userStatus = data.userStatus;
+                self.$router.push({name: 'certification', query: nextParams});
+              // }
+            // });
+          } else if (standard == 1) {
+            //开通会员
+            this.showMsgBoxConfirm('对不起，只有付费会员才能查看！您还未付费，请您先完成付费！', action => {
+              if (action) {
+                //开通会员
+                nextParams.userStatus = data.userStatus;
+                window.location.href = '/v2/business/pay/openMember?fullPath=' + nextParams.fullPath
+                  + '&userStatus=' + nextParams.userStatus;
+                //self.$router.replace({name: 'openMember', query: nextParams});
+              }
+            });
+          } else {
+            //认证
+            // this.showMsgBoxConfirm('对不起，只有认证会员才能查看！您还未认证，请您先完成认证！', action => {
+            //   if (action) {
+                //开通会员
+                nextParams.userStatus = data.userStatus;
+                self.$router.push({name: 'certification', query: nextParams});
+              // }
+            // });
+          }
+          break;
+        case 1:
+          if (standard == 2) {
+            this.showMsgBoxConfirm('对不起，只有付费会员才能查看！您还未付费，请您先完成付费！', action => {
+              if (action) {
+                nextParams.userStatus = data.userStatus;
+                window.location.href = '/v2/business/pay/openMember?fullPath=' + nextParams.fullPath
+                  + '&userStatus=' + nextParams.userStatus;
+                //self.$router.replace({name: 'openMember', query: nextParams});
+              }
+            });
+          } else {
+            nextParams.userStatus = data.userStatus;
+            successCallback && successCallback(data);
+          }
+          break;
+        case 2:
+          //nextParams.userStatus = data.userStatus;
+          successCallback && successCallback(data);
+          break;
+      }
+    }, errorCallback, self, true);
+  },
+
+  getSlyYou(self, successCallback, errorCallback) {
+    this.post(self._Api.POST_WXAUTH_SLY_YOU, {}, (data) => {
+      successCallback && successCallback(data);
+    }, () => {
+
+    }, self);
+  },
+
+  showMsgBox(msg, title) {
+    MessageBox({
+      title: title || '提示',
+      message: msg
+    });
+  },
+
+  showMsgBoxThen(msg, callback) {
+    MessageBox.alert(msg, '提示').then(action => {
+      if (action) {
+        callback && callback();
+      }
+    });
+  },
+
+  showMsgBoxConfirm(msg, confirmCallback, options) {
+    MessageBox.confirm(msg, '提示', options).then( action => {
+      confirmCallback && confirmCallback(true);
+    }, cancel => {
+      confirmCallback && confirmCallback(false);
+    });
+  },
+
+  showToast(msg, iconClass) {
+    Toast({
+      message: msg,
+      iconClass: iconClass || 'icon icon-success',
+      className: 'z-index-max'
+    });
+  },
+
+  setLocalStorage(key, obj) {
+    localStorage.setItem(key, JSON.stringify(obj));
+  },
+
+  getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+  },
+
+  removeLocalStroageByKey(key){
+    localStorage.removeItem(key)
+  },
+
+  log(o) {
+    console.log(JSON.parse(JSON.stringify(o)));
+  },
+
+  copyObject(o) {
+    return JSON.parse(JSON.stringify(o));
+  },
+
+  getByteLen(str) {
+    let len = 0;
+    for (let i = 0; i < str.length; i++) {
+      let a = str.charAt(i);
+      if (a.match(/[^\x00-\xff]/ig) != null) {
+        len += 2;
+      } else {
+        len += 1;
+      }
+    }
+    return len;
+  },
+
+  getQueryString(paramName) {
+    let reg = new RegExp("(^|&)" + paramName + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+  },
+
+  getObjectByKey() {
+
+  },
+
+  isArrayInclude: function (key, value, arr) {
+    let item = '';
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i][key] == value) {
+        item = arr[i];
+        break;
+      }
+    }
+    return item;
+  },
+
+}

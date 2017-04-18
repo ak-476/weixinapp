@@ -1,0 +1,161 @@
+<template>
+  <div>
+    <div class="scoopDetail">
+      <div class="DetailCaption">
+        <div class="captionImg">
+          <img :src="result.hotelImgUrl">
+        </div>
+        <div class="captionMation">
+          <p class="p1">线下培训交流会__{{result.province}} {{result.city}}站</p>
+          <p class="p2">{{result.startTime | dateFormat('MM月dd日')}}~{{result.endTime | dateFormat('MM月dd日')}}</p>
+          <div class="div1" style="height: 30px">
+            <p style="height: 30px;line-height: 20px;">{{result.hotelName}}</p>
+            <button @click="openMap()" type="danger" class="apply">查看地图</button>
+          </div>
+          <div class="div2">
+            <a href="tel:13589898989">
+              咨询电话：<span class="tel">18389898989</span>(<span>朱小姐</span>)
+              <img src="../../../assets/images/phone.png">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="DetailIntroduce">
+        <div class="introduceItem">
+          <p>活动安排：</p>
+          <div class="item">
+            <p>第一天上午</p>
+            <p>博士后处理的介绍(Denox2.2系统，Denox6.5系统)</p>
+          </div>
+          <div class="item">
+            <p>下午</p>
+            <p>天纳克后处理系统介绍，喷油器的精密维修介绍</p>
+          </div>
+          <div class="item">
+            <p>第二天上午</p>
+            <p>依米泰克，三立，康明斯后处理系统介绍</p>
+          </div>
+          <div class="item">
+            <p>上午</p>
+            <p>维修站现场实操。喷油器精密维修+后处理车载诊断维修技巧实操</p>
+          </div>
+          <div class="item">
+            <p>主讲人</p>
+            <p>共轨之家技术部</p>
+          </div>
+
+        </div>
+
+        <div class="introduceItem">
+          <p>收费规则</p>
+          <div class="item">
+            <p>1、未付费会员需先缴纳年费</p>
+            <p>2、每期交流会收取场地费用200元</p>
+            <p>3、代订酒店需付定金100元，可抵充房费</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="DetailIntroduce" >
+        <div class="introduceItem">
+          <p>注意事项</p>
+          <div class="item">
+            <p>本活动可退、可改签其他场次（请在活动开始前一天告知）</p>
+          </div>
+        </div>
+      </div>
+      <div style="height: 60px;"></div>
+
+
+
+      <!--<mt-button @click.native="openMap()" type="danger" class="apply">打开地图</mt-button>-->
+
+      <!--<Dialog-component v-if="dialogShow" type="confirm" title="弹窗标题"
+                        confirm-button="确定" cancel-button="取消">
+        <input />
+        <br>
+        ...
+      </Dialog-component>-->
+    </div>
+    <div style="position: fixed;left: 0;bottom: 0;width: 100%;height: 60px;z-index: 1000;background: white">
+      <mt-button type="danger" :disabled="enterFlag" @click.native="enterFor()" class="apply" style="margin:10px 10px 30px;width: 96%;margin-left: 2%;line-height: 30px;font-size: 16px;background: #d41116;">
+        {{enterFlag ? '已报名' : '去报名'}}
+      </mt-button>
+    </div>
+  </div>
+</template>
+<script type="text/babel">
+  import { Button } from 'mint-ui';
+  import wx from 'weixin-js-sdk'
+
+  export default{
+    data(){
+      return {
+        result: {},
+        enterFlag: true
+      }
+    },
+    mounted() {
+      let that = this;
+      that._Util.post(that._Api.POST_LECTURE_ROOM_DETAIL, {addressId: that.$route.query.id}, function (data) {
+        that.result = data;
+      }, function () {
+
+      }, that);
+
+      that._Util.post(that._Api.POST_LECTURE_ROOM_CHECK_SHARE, {addressId: that.$route.query.id}, function (data) {
+        that.enterFlag = data.verifyStatus;
+      }, function () {
+
+      }, that);
+    },
+    methods: {
+      enterFor() {
+        let that = this;
+        that._Util.getUserStatus(that, (data) => {
+          that.$router.push({name: 'currentPeriodCost', query: {id: that.result.id, userStatus: data.userStatus}});
+        }, () => {
+
+        }, {
+          name: that.$route.name,
+          fullPath: '/v2/lectureRoom/current/cost?id=' + that.result.id + '&userStatus=1'
+        }, that._Enums.AUTH);
+      },
+      openMap() {
+        let that = this;
+        that._Util.post(that._Api.POST_COMMON_WXSDK_CONFIG, {url: location.href}, function (data) {
+          wx.config({
+            debug: false,
+            appId: data.appId,
+            timestamp: data.timestamp,
+            nonceStr: data.nonceStr,
+            signature: data.signature,
+            jsApiList: ['openLocation']
+          });
+
+          wx.ready(function () {
+            if (that.result.hotelCoordinate) {
+              wx.openLocation({
+                latitude: that.result.hotelCoordinate.split(',')[0],
+                longitude: that.result.hotelCoordinate.split(',')[1],
+                name: that.result.hotelName,
+                address: that.result.province + that.result.city + that.result.hotelAddress,
+                scale: 14,
+                infoUrl: 'http://weixin.qq.com'
+              });
+            } else {
+              that._Util.showMsgBox('经纬度错误!');
+            }
+          });
+
+        }, function () {
+
+        }, that);
+      }
+    },
+    components: {
+    }
+  }
+</script>
+

@@ -1,0 +1,3011 @@
+*{
+  font-family: '微软雅黑';
+}
+.scoopList {
+  overflow: hidden;
+  border-bottom: 20px solid #e6e6e6;
+}
+
+.scoopList .listCover {
+  position: relative;
+
+}
+
+.scoopList .listMes {
+  margin-bottom: 2px;
+  box-shadow: 0px 1px 2px 0px rgba(101, 101, 101, 0.45);
+}
+
+.scoopList .listCover img {
+  width: 100%;
+}
+
+.scoopList .listCover div {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 5;
+}
+
+.scoopList .listCover div p {
+  color: white;
+  font-weight: bold;
+
+}
+
+.scoopList .listCover div p span {
+  font-size: 14px;
+}
+
+.scoopList .listCover div p:first-child {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.scoopList .listCover div p:first-child span {
+  font-size: 24px;
+}
+
+.scoopList .listMes > div {
+  overflow: hidden;
+  margin: 0 2%;
+  padding: 5px 0;
+}
+
+.scoopList .listMes .listMesB {
+  position: relative;
+  padding-top: 10px;
+}
+
+.scoopList .listMesB button {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  background: #d41116;
+  color: white;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.scoopList .listMesB p {
+  font-size: 16px;
+}
+
+.scoopList .listMesT p {
+  float: left;
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #8f8f8f;
+}
+
+.scoopList .listMesT p.Tright {
+  float: right;
+  width: 100px;
+  text-align: right;
+}
+
+.scoopDetail .DetailCaption {
+  border-bottom: 10px solid #ededed;
+  padding-bottom: 10px;
+  background: white;
+}
+
+.scoopDetail .captionImg {
+  height: 210px;
+}
+
+.scoopDetail .captionImg img {
+  height: 100%;
+  width: 100%;
+}
+
+.scoopDetail .captionMation {
+  margin: 0 10px;
+}
+
+.scoopDetail .captionMation p {
+  margin-top: 10px;
+}
+
+.scoopDetail .captionMation p.p1 {
+  font-size: 16px;
+}
+
+.scoopDetail .captionMation p.p2 {
+  font-size: 14px;
+  color: #666666;
+}
+
+.scoopDetail .captionMation div.div1 {
+  height: 25px;
+  border-bottom: 1px solid #cccccc;
+  color: #666666;
+  position: relative;
+}
+
+.scoopDetail .captionMation div.div1 button {
+  color: #1766b3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.scoopDetail .captionMation div.div2 {
+  height: 30px;
+  margin-top: 10px;
+}
+
+.scoopDetail .captionMation div.div2 a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  line-height: 30px;
+}
+
+.scoopDetail .captionMation div.div2 a img {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 0;
+  top: 0;
+}
+
+.scoopDetail .captionMation div.div2 a span.tel {
+  color: #1766b3;
+}
+
+.DetailIntroduce {
+  border-bottom: 10px solid #ededed;
+  background: white;
+  overflow: hidden;
+}
+
+.DetailIntroduce .introduceItem > div {
+  margin: 0 10px;
+}
+
+.DetailIntroduce .introduceItem > p {
+  color: #666666;
+  margin: 10px 10px 0;
+  line-height: 25px;
+}
+
+.DetailIntroduce .introduceItem div.item {
+  margin-bottom: 10px;
+}
+
+.DetailIntroduce .introduceItem div.item p {
+  line-height: 22px;
+}
+
+.scoopDetail > a.apply {
+  display: block;
+  width: 94%;
+  margin: 20px auto;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  background: #d41116;
+  border-radius: 5px;
+}
+
+.regeditMy {
+  overflow: hidden;
+}
+
+.regeditMy > div {
+  overflow: hidden;
+  margin-top: 10px;
+  height: 70px;
+  background: white;
+  position: relative;
+}
+
+.regeditMy > div p {
+  font-size: 16px;
+  margin: 7px 10px;
+}
+
+.regeditMy > div p.cost {
+  color: #d41116;
+  font-weight: bold;
+}
+
+.regeditMy > div span {
+  width: 23px;
+  height: 23px;
+  background: url(../../assets/images/20161103002.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 5;
+
+}
+
+.regeditMy > div span.active {
+  background: url(../../assets/images/20161103003.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.regeditMy > div input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.regeditCost {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.regeditCost a {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 130px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background: #d41116;
+  color: white;
+  font-size: 16px;
+
+}
+
+.regeditCost p {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.regeditCost p span {
+  color: #d41116;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.regeditPay .regeditOrder {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.regeditPay .regeditOrder p.regeditOrderL {
+  float: left;
+  margin-left: 10px;
+  color: #666666;
+}
+
+.regeditPay .regeditOrder p.regeditOrderR {
+  float: right;
+  margin-right: 10px;
+  color: #d41116;
+}
+
+.regeditPay p.orderCost {
+  height: 50px;
+  background: white;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.regeditPay p.orderCost span:first-child {
+  margin-left: 10px;
+}
+
+.regeditPay .orderPrice {
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.regeditPay .orderPrice span {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.regeditPay .wxPay, .payingMember .wxPay {
+  width: 94%;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  background: #d41116;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.becomeMember .MemberNav {
+  overflow: hidden;
+}
+
+.becomeMember .MemberNav ul {
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 10px 10px;
+  background: #d6d6d6;
+  box-shadow: 0 2px 2px #aaaaaa inset;
+}
+
+.becomeMember .MemberNav ul li {
+  float: left;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.becomeMember .MemberNav ul li.active {
+  background: #1766b3;
+  color: white;
+  box-shadow: 0 0 10px #000;
+}
+
+.bMember ul {
+  overflow: hidden;
+  margin: 0 10px 10px;
+}
+
+.bMember .fufeiForm {
+  padding-top: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.bMember ul li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+
+.bMember ul li div {
+  width: 99%;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.bMember ul li.li1 {
+  width: 25%;
+}
+
+.bMember ul li.li2 {
+  width: 75%;
+  position: relative;
+}
+
+.bMember ul li div input {
+  width: 100%;
+  height: 100%;
+  text-indent: 10px;
+  font-size: 16px;
+  line-height: 38px;
+  display: block;
+}
+
+.bMember .fufeiImg {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.bMember .fufeiImg img {
+  height: 110px;
+}
+
+.bMember .fufeiImg p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.bMember ul li.li2 div.yzm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+}
+
+.bMember ul li.li2 div.yzmBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+}
+
+.bMember ul li.li2 div.yzmBtn button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #d41116;
+  color: white;
+}
+
+.fufeiPrice .wxPay {
+  width: 94%;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  background: #d41116;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.fufeiPrice p {
+  margin: 5px 10px 0px;
+}
+.fufeiPrice p:first-child{
+  margin:  10px 10px 0;
+}
+
+/*个人信息*/
+.personal_detail {
+  width: 100%;
+  height: 100%;
+}
+
+.personal_detail .detail_img {
+  overflow: hidden;
+  text-align: center;
+}
+
+.personal_detail .detail_img img {
+  margin: 31px auto 15px;
+  width: 75px;
+  border-radius: 37.5px;
+}
+
+.personal_detail .detail_img p {
+  text-align: center;
+}
+
+.personal_detail .detail_mation {
+  margin-top: 50px;
+}
+
+.personal_detail .detail_mation ul {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+  background: url(../../assets/images/gradeHa.png) right center no-repeat;
+  background-size: 8px 13px;
+  position: relative;
+}
+
+.personal_detail .detail_mation ul li {
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  color: #8f8f8f;
+}
+
+.personal_detail .detail_mation ul select {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: right;
+  opacity: 0;
+}
+
+.personal_detail .detail_mation ul li.detail_title {
+  float: right;
+  margin-right: 15px;
+  color: #333;
+  width: 66%;
+  text-align: right;
+}
+.personal_detail .detail_mation ul li.detail_title a span{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.personal_detail .detail_btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.personal_detail .detail_btn button {
+  display: block;
+  width: 92%;
+  margin-left: 4%;
+  height: 50px;
+  margin-top: 10px;
+  background: #d41116;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+}
+
+.monolayer {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.monolayer .domOpcity {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.7;
+}
+
+.monolayer .domSuspend {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 150px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.monolayer .domSuspend p {
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.monolayer .domSuspend .textInput {
+  margin: 0 20px 20px;
+  padding: 10px 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.monolayer .domSuspend .textInput input {
+  font-size: 16px;
+  width: 100%;
+  text-indent: 10px;
+}
+
+.monolayer .domSuspend .phoneInput {
+  margin: 0 20px 20px;
+  overflow: hidden;
+
+}
+
+.monolayer .domSuspend .phoneInput input {
+  font-size: 16px;
+  width: 55%;
+  text-indent: 10px;
+  float: left;
+  height: 48px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.monolayer .domSuspend .phoneInput button {
+  font-size: 16px;
+  width: 40%;
+  text-indent: 0;
+  float: left;
+  text-align: center;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: #1766b3;
+  border-radius: 5px;
+  float: right;
+}
+
+.monolayer .domSuspend .phoneInput button[disabled] {
+  background: #666;
+
+}
+
+.monolayer .domSuspend .btnClick {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.monolayer .domSuspend .btnClick button {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 49.5%;
+  float: left;
+  font-size: 16px;
+  background-color: white
+}
+
+.monolayer .domSuspend .btnClick button.cancel {
+  margin-right: 0.5%;
+}
+
+.monolayer .domSuspend .btnClick button.ensure {
+  color: #1766b3;
+}
+
+.growLife {
+  overflow: hidden;
+}
+
+.growLife .growLifeImg {
+  padding: 27px 0;
+  text-align: center;
+}
+
+.growLife .growLifeImg > img {
+  height: 70px;
+  border-radius: 40px;
+  border: 5px solid #97c2eb;
+}
+
+.growLife .growLifeImg > p {
+  color: white;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.growLife .growLifeImg ul {
+  overflow: hidden;
+}
+
+.growLife .growLifeImg li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin-left: 20%;
+}
+
+.growLife .growLifeImg li span:first-child {
+  width: 53px;
+  height: 50px;
+  display: inline-block;
+  opacity: 0.7
+}
+
+.growLife .growLifeImg li p {
+  color: #9BC7F2;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.growLife .growLifeImg li span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.growLife .growLifeImg > ul {
+  margin-top: 27px;
+}
+
+.growLife .growLifeImg li:first-child span:first-child {
+  background: url(../../assets/images/20141109003.png) 0 center no-repeat;
+  background-size: 197% 100%;
+}
+
+.growLife .growLifeImg li:last-child span:first-child {
+  background: url(../../assets/images/20141109003.png) right center no-repeat;
+  background-size: 197% 100%;
+}
+
+.growLife .growInfo {
+  min-height: 200px;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.growLife .growInfo span.tip {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fff;
+  top: -15px;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.personalIndex .pIndex_part:first-child {
+  padding: 10px;
+  background: white url(../images/gradeHa.png) 96% center no-repeat;
+  background-size: 8px 15px;
+  overflow: hidden;
+  margin: 10px 0 0;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+.personalIndex .pIndex_part:first-child span.jifen{
+  color: #8f8f8f;
+  position: absolute;
+  height: 75px;
+  width: 100px;
+  line-height: 75px;
+  right: 25px;
+  text-align: center;
+  top: 0;
+}
+
+.personalIndex .pIndex_part:first-child > div {
+  float: left;
+  line-height: 22px;
+  padding-top: 5px;
+  width: 75%;
+}
+
+.personalIndex .pIndex_part:first-child > div:first-child {
+  width: 55px;
+  height: 55px;
+  border-radius: 27.5px;
+  overflow: hidden;
+  margin-right: 10px;
+  padding-top: 0;
+}
+
+.personalIndex .pIndex_part:first-child > div a {
+  display: block;
+  width: 100%;
+}
+
+.personalIndex .pIndex_part:first-child > div p {
+  color: #1766b3;
+}
+
+.personalIndex .pIndex_part:first-child > div:first-child img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.personalIndex .pIndex_part ul {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.personalIndex .pIndex_part ul li {
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
+  background: white url(../images/gradeHa.png) right center no-repeat;
+  background-size: 8px 15px;
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+}
+
+.personalIndex .pIndex_part ul li:last-child {
+  border-bottom: none;
+
+}
+
+.personalIndex .pIndex_part ul li p {
+  color: #8f8f8f;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.personalIndex .pIndex_part ul li p span {
+  color: #8f8f8f;
+}
+
+.personalIndex .pIndex_part ul li span:nth-child(2) {
+  margin-left: 30px;
+  width: 85%;
+}
+
+.personalIndex .pIndex_part ul li span:nth-child(2) a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+
+}
+
+.personalIndex .pIndex_part ul li span a span {
+  float: right;
+  border-radius: 11px;
+  background: #d41116;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  color: white;
+  margin-top: 11.5px;
+  text-align: center;
+  font-size: 9px;
+}
+
+.pIndex_part li > span:first-child {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.pIndex_part li.vipXufei > span:first-child {
+  background: url(../../assets/images/20141110001.png) center 0 no-repeat;
+  background-size: 100% 600%;
+}
+
+.pIndex_part li.myOrder > span:first-child {
+  background: url(../../assets/images/20141110001.png) center -27px no-repeat;
+  background-size: 115% 600%;
+}
+
+.pIndex_part li.myGift > span:first-child {
+  background: url(../../assets/images/20141110001.png) center -53px no-repeat;
+  background-size: 100% 600%;
+}
+
+.pIndex_part li.myMation > span:first-child {
+  background: url(../../assets/images/20141110001.png) center -89px no-repeat;
+  background-size: 100% 664%;
+}
+
+.pIndex_part li.myAddress > span:first-child {
+  background: url(../../assets/images/20141110001.png) center -114px no-repeat;
+  background-size: 100% 664%;
+}
+
+.pIndex_part li.mygrow > span:first-child {
+  background: url(../../assets/images/20141110001.png) center -126px no-repeat;
+  background-size: 100% 600%;
+}
+.pIndex_part li.myTest > span:first-child{
+  background: url(../images/texun666.png) center center no-repeat;
+  background-size: 25px 25px;
+}
+.pIndex_part li.myCoupon > span:first-child{
+  background: url(../images/youhuiquan.png) center center no-repeat;
+  background-size: 21px 25px;
+}
+.pIndex_part li.myShoped > span:first-child{
+  background: url(../images/2017yigou.png) center center no-repeat;
+  background-size: 21px 25px;
+}
+
+.pIndex_part li.myTest >a,.pIndex_part li.myShoped >a{
+  display: inline-block;
+    width: 92%;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 30px;
+    position: relative;
+}
+.pIndex_part li.myTest >a>span{
+  float: right;
+}
+.myOrder .orderList {
+  background: white;
+  margin-bottom: 10px;
+}
+
+.myOrder .orderList .orderId {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.myOrder .orderList .orderId p {
+  float: left;
+}
+
+.myOrder .orderList .orderId p:last-child {
+  float: right;
+  color: orange;
+}
+
+.myOrder .orderList .orderNum li {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+.myOrder .orderList .orderNum li:first-child {
+  margin-top: 0;
+  position: relative;
+}
+
+.myOrder .orderList .orderNum li div {
+  float: left;
+}
+
+.myOrder .orderList .orderNum li div.priceOdd {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #d41054;
+}
+
+.myOrder .orderList .orderNum li div.priceOdd span {
+  color: #d41054;
+}
+
+.myOrder .orderList .orderNum li div:first-child {
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.myOrder .orderList .orderNum li div:nth-child(2) {
+  line-height: 23px;
+  width: 70%;
+
+}
+
+.myOrder .orderList .orderNum li div:first-child img {
+  width: 70px;
+  height: 70px;
+}
+
+.myOrder .orderList .orderNum li div:nth-child(2) p.times {
+  color: #8f8f8f;
+}
+
+.myOrder .orderList .orderNum li div:nth-child(2) p.times span {
+  color: #8f8f8f;
+}
+
+.myOrder .orderList .orderNum p.lookAll {
+  height: 40px;
+  text-align: center;
+  color: #1766b3;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.myOrder .orderList .orderNum > p span {
+  color: #d41054;
+}
+
+.myOrder .orderList .orderNum > p.getAllPrice {
+  height: 25px;
+  line-height: 25px;
+  text-align: right;
+  padding-right: 10px;
+}
+.myOrder .orderList .orderNum > ul{
+  margin-bottom: 5px;
+}
+.myOrder .orderList .orderNum > div {
+  border-top: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.myOrder .orderList .orderNum > div button.order_cancel {
+  font-size: 16px;
+  height: 30px;
+  border: 1px solid #8f8f8f;
+  color: #8f8f8f;
+  text-align: center;
+  margin-right: 10px;
+  width: 80px;
+  border-radius: 3px;
+}
+
+.myOrder .orderList .orderNum > div button.order_ensure {
+  font-size: 16px;
+  height: 30px;
+  border: 1px solid #d41116;
+  color: #fff;
+  background: #d41116;
+  text-align: center;
+  margin-right: 10px;
+  width: 80px;
+  border-radius: 3px;
+}
+
+.myOrder .orderList.payed .orderId p:last-child {
+  color: #8f8f8f;
+}
+
+.myOrder .orderList.cancel .orderId p:last-child {
+  color: #8f8f8f;
+}
+
+.myOrder .orderList.cancel .orderNum li div.priceOdd, .myOrder .orderList.cancel .orderNum li div.priceOdd span {
+  color: #8f8f8f;
+}
+
+.myOrder .orderList.cancel .orderNum > p span {
+  color: #8f8f8f;
+}
+
+.orderDetail .detailTimeto {
+  height: 70px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: white;
+}
+
+.orderDetail .detailTimeto p.p1 {
+  float: left;
+  margin: 10px;
+  margin-right: 0;
+}
+
+.orderDetail .detailTimeto p.p1 img {
+  height: 50px;
+}
+
+.orderDetail .detailTimeto p.p2 {
+  float: left;
+  margin: 7px 10px 10px;
+  width: 78%;
+}
+
+.orderDetail .detailTimeto p.p2 span:nth-child(3) {
+  color: #8f8f8f;
+  font-size: 12px;
+}
+
+.orderDetail .detailMation {
+  margin-top: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.orderDetail .detailMation > div {
+  overflow: hidden;
+}
+
+.orderDetail .detailMation > div p {
+  float: left;
+  margin-left: 10px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.orderDetail .detailMation > div p:nth-child {
+  margin-right: 10px;
+}
+
+.orderDetail .detailMation > p {
+  margin: 0px 10px;
+}
+
+.orderDetail .detailList {
+  margin-bottom: 10px;
+  background: white;
+}
+
+.orderDetail .detailList p.danhao, .orderDetail .detailList p.danhao span {
+  height: 30px;
+  line-height: 30px;
+  color: #8f8f8f;
+  padding-left: 10px;
+}
+
+.orderDetail .detailList p.danhao2, .orderDetail .detailList p.danhao2 span {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.orderDetail .detailList ul {
+  background: #f5f5f5;
+}
+
+.orderDetail .detailList li {
+  overflow: hidden;
+  margin: 0 10px 10px;
+  padding: 5px 0;
+}
+
+.orderDetail .detailList li div:first-child {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.orderDetail .detailList li div:first-child img {
+  width: 100%;
+  height: 100%;
+}
+
+.orderDetail .detailList li div {
+  float: left;
+}
+
+.orderDetail .detailList li div:last-child {
+  float: right;
+  text-align: right;
+
+}
+
+.orderDetail .detailList li div:nth-child(2) {
+  float: left;
+}
+
+.orderDetail .detailList div.mianfei {
+  text-align: right;
+  line-height: 20px;
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.orderDetail .detailList p.detailPrice {
+  text-align: right;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 10px;
+}
+
+.orderDetail .detailList p.detailPrice span {
+  color: #d41117;
+}
+
+.orderDetail .detailsAllprice {
+  padding: 10px;
+  background: white;
+}
+
+.orderDetail .detailsAllprice ul {
+  overflow: hidden;
+  line-height: 23px;
+}
+
+.orderDetail .detailsAllprice li {
+  float: left;
+}
+
+.orderDetail .detailsAllprice li:last-child {
+  float: right;
+}
+
+.allTopay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.allTopay p {
+  background: #f5f5f5;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+.allTopay p span {
+  color: #d41116;
+}
+
+.allTopay button {
+  background: #d41116;
+  color: white;
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.renewal .renewal_img {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.renewal .renewal_img img {
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+.renewal .renewal_img p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.renewal > p {
+  font-size: 16px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.renewal > p span {
+  font-size: 16px;
+  color: #d41116;
+  font-weight: bold;
+}
+
+.renewal .renwval_btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background: #ededed;
+  text-align: center;
+  width: 100%;
+}
+
+.renewal .renwval_btn button {
+  width: 96%;
+  margin-top: 10px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  background: #d41116;
+  border-radius: 5px;
+}
+
+.addressMy .myAddressList {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin: 0 10px;
+}
+
+.addressMy .myAddressList div {
+
+  overflow: hidden;
+
+}
+
+.addressMy .myAddressList div.listEdit {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+.addressMy .myAddressList div p {
+  float: right;
+
+}
+
+.addressMy .myAddressList div p:first-child {
+  float: left;
+}
+
+.addressMy .myAddressList div p button {
+  text-align: right;
+  margin-left: 10px;
+  color: #8f8f8f;
+}
+
+.addressMy .myAddressList div p:first-child span {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.addressMy .myAddressList div p button:first-child {
+  width: 50px;
+  height: 30px;
+  background: url(../../assets/images/20161111001.png) left center no-repeat;
+  background-size: 15px 15px;
+}
+
+.addressMy .myAddressList div p button {
+  width: 50px;
+  height: 30px;
+  background: url(../../assets/images/20161111002.png) left center no-repeat;
+  background-size: 15px 15px;
+}
+
+.addressMy .myAddressList p.listAddress {
+  color: #8f8f8f;
+}
+
+.addAddress div.name, .addAddress div.tel, .addAddress div.country, .addAddress div.address {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.addAddress div.addBTn {
+  border: 0;
+  margin: 150px 10px 0 10px;
+  height: 70px;
+  text-align: center;
+  margin-top: 70%;
+
+}
+
+.addAddress div input {
+  width: 70%;
+}
+
+.addAddress div.name span {
+  letter-spacing: 5px;
+}
+
+.addAddress div.addBTn button {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background: #d41116;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.addAddress div.country {
+  background: url(../../assets/images/20161111003.png) right center no-repeat;
+  background-size: 15px 20px;
+}
+
+span {
+  display: inline-block;
+}
+
+.growLife .growInfo .growStyle {
+  overflow: hidden;
+}
+
+.growLife .growInfo .growStyle ul {
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+}
+
+.growLife .growInfo .growStyle ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.growLife .growInfo .growStyle ul li.chartArc {
+  min-height: 160px;
+  width: 55%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.growLife .growInfo .growStyle ul li span {
+  font-size: 12px;
+}
+
+.growLife .growInfo .growStyle ul li span:first-child {
+  width: 70%;
+  height: 10px;
+}
+
+.view input.mint-field-core {
+  display: block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+}
+
+#personal_detail .mint-cell-title {
+  width: 50px;
+}
+
+.dateDay .mint-cell-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 18px;
+  color: #ccc;
+  width: 10px;
+  height: 7px;
+  font-size: 14px;
+  background: url("../../assets/images/icon_arrowd2.png") center center no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.formFile .mint-field .mint-cell-title {
+  width: 70px;
+}
+
+.addAddress div.country {
+  overflow: hidden;
+}
+
+.addAddress div.country p {
+  float: left;
+  margin-left: 10px;
+}
+
+.addAddress div.country span {
+  float: left;
+}
+
+.uregTime {
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 225px;
+  display: block;
+}
+
+.uregTime .picker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 155px;
+}
+
+.uregTime button {
+  position: absolute;
+  top: 10px;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.uregTime button.cancel {
+  left: 20px;
+  font-size: 16px;
+  color: #ff5657;
+  background: none;
+
+}
+
+.uregTime button.ensure {
+  right: 20px;
+  font-size: 16px;
+  color: #ff5657;
+  background: none;
+
+}
+
+.uregTime > span {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #333;
+  background: none;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: -10;
+  text-align: center;
+}
+
+.renewal .uerTime {
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.renewal .uerTime span.uerYear {
+  float: left;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.renewal .uerTime span.uerYearTime {
+  float: right;
+  margin-right: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  background: url("../images/gradeHa.png") right center no-repeat;
+  background-size: 8px 15px;
+}
+
+#newEntity {
+  width: 80px;
+  height: 48px;
+  color: #278AF7;
+  font-size: 12px;
+  text-align: center;
+}
+
+.faultCodeSeach {
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  background: white;
+}
+
+.guzhang {
+  padding: 0px 10px 20px;
+  background: url(../../assets/images/water.png) repeat-y;
+  background-size: 100% auto;
+  min-height: 90%;
+}
+
+.weui_dialog_bd .mint-field .mint-cell-title {
+  width: 50px;
+}
+
+.bgSelf {
+  background: #CCCCCC;
+}
+
+.bMember.current ul li.li2 {
+  width: 100%;
+}
+
+.bMember.current > p {
+  height: 100px;
+  line-height: 140px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.tabzldq {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  z-index: 1100;
+  height: 80px;
+}
+
+.tabzldq a {
+  margin-right: 0;
+  padding: 10px 0;
+  width: 25%;
+  text-align: center;
+}
+
+.tabzldq a:nth-child(1) {
+  margin-right: 0;
+}
+
+.tabzldq a span.icony {
+  margin-bottom: 5px;
+}
+
+.tabzldq a:nth-child(1).active span.icony {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL1.png) 0 center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(2).active span.icony {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL1.png) -74px center no-repeat;
+  background-size: 455% 100%;
+}
+
+.tabzldq a:nth-child(3).active span.icony {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL1.png) -38px center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(4).active span.icony {
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL1.png) -117px center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(1) span.icony {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL2.png) 0 center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(2) span.icony {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL2.png) -74px center no-repeat;
+  background-size: 455% 100%;
+}
+
+.tabzldq a:nth-child(3) span.icony {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL2.png) -38px center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(4) span.icony {
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  background: url(../images/dianluziliao/iconZL2.png) -117px center no-repeat;
+  background-size: 530% 100%;
+}
+
+.tabzldq a:nth-child(4).active span.word {
+  background: url(../images/Htitb.png) 0px center no-repeat;
+  background-size: 100% 100%;
+}
+
+.col.col3 {
+  padding: 0;
+}
+
+.col.col3 li {
+  width: 25%;
+  border: 0;
+  margin: 0;
+  height: 105px;
+}
+
+.col.col3 li:nth-child(3n-1) {
+  margin: 0;
+}
+
+.col.col3 li p {
+  border: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0;
+}
+
+.col.col3 li div {
+  height: 80px;
+  line-height: 80px;
+  display: block;
+  vertical-align: middle;
+
+}
+
+.col.col3 li div img {
+  max-width: 60px;
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+.col.col3 li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.col.col3 ul {
+  overflow: hidden;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.col .engineModel li {
+  box-shadow: 0 2px 2px #ddd;
+}
+
+.scrollfixed {
+  width: 100%;
+}
+
+.labelList {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  text-align: center;
+  width: 22.5%;
+  margin-left: 2%;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: none;
+  background: white;
+  box-shadow: 0 0 1px 1px #aaa inset;
+}
+.labelList.group2{
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.labelList.group1{
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.labelList.active {
+  background: #1766b3;
+  color: #ffffff;
+}
+
+.zlscimg {
+  height: 90px;
+}
+
+.zlscimg img {
+  width: 78px;
+  height: 66px;
+  margin-top: 10px;
+}
+
+.picker-items .picker-center-highlight:before, .picker-items .picker-center-highlight:after {
+  background: #CCCCCC;
+}
+
+input[type=text], input[type=submit], input[type=button], input[type=number], select {
+  font-size: 16px;
+}
+
+.pagenana input {
+  text-indent: 0;
+  text-align: center;
+}
+
+.sosoList li.iconHand {
+  background: url("../images/query/iconSearchHand.png") 15px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList div.iconPicture {
+  background: url("../images/query/iconPicture.png") 0px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList div.iconQ {
+  background: url("../images/query/iconSearchQ.png") 0px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList div.iconArticle {
+  background: url("../images/query/iconArticle.png") 0px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList div.iconProduct {
+  background: url("../images/query/iconProduct.png") 0px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList div.iconFaltCode {
+  background: url("../images/query/iconFaltCode.png") 0px 10px no-repeat;
+  background-size: 25px;
+}
+
+.sosoList {
+  border-top: none;
+  margin: 0;
+}
+
+.labelAll {
+  background: white;
+}
+
+.list_style2 li.benqi {
+  background: url("../images/texun111.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+
+.list_style2 li.wangqi {
+  background: url("../images/texun222.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+
+.list_style2 li.jingpin {
+  background: url("../images/texun333.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+
+.list_style2 li.diankong {
+  background: url("../images/texun444.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+.list_style2 li.smallGui{
+  background: url("../images/xiaoguidongtai.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+.list_style2 li.rumen {
+  background: url("../images/texun555.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+
+.list_style2 li.ceping {
+  background: url("../images/texun666.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+.list_style2 li.jianyi{
+  background: url("../images/texun777.png") left center no-repeat;
+  background-size: 25px 25px;
+}
+
+.list_style2 li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 16px;
+  background: url("../images/gradeHa.png") right center no-repeat;
+  background-size: 8px 15px;
+  overflow: hidden;
+  text-indent: 35px;
+}
+
+.list_style2.nopadding li a {
+  text-indent: 0;
+}
+
+.list_style2 li a span {
+  text-indent: 0;
+  margin-right: 15px;
+}
+
+.growLife .growInfo .growStyle ul li.clickNum {
+  position: absolute;
+  top: 10px;
+  width: 35%;
+  left: 10px;
+}
+
+.newForm {
+  overflow: hidden;
+  height: 48px;
+  line-height: 48px;
+  position: relative;
+  background: white;
+}
+
+.page-part.newForm {
+  margin-top: 10px;
+}
+
+.newForm input {
+  float: right;
+  width: 75%;
+  height: 30px;
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.newForm span {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  font-size: 14px;
+  text-indent: 10px;
+}
+
+.newForm #newEntity {
+  position: absolute;
+  right: 0;
+}
+
+.dingdandiv p {
+  margin-top: 200px;
+}
+
+.list2 li:nth-child(2n) {
+  background-color: white;
+}
+.parseInfo .tabnav2 a:nth-child(1) span.icony{width:30px;height:30px;background:url(../images/tabletupiana2.png) -1px center no-repeat;background-size:180% 80%;;}
+.parseInfo .tabnav2 a:nth-child(2) span.icony{width:30px;height:30px;background:url(../images/tabletupiana2.png) right center no-repeat;background-size:240% 99%;}
+.parseInfo .tabnav2 a:nth-child(1).active span.icony{background:url(../images/tabletupiana1.png) -1px center no-repeat;background-size:180% 80%;;}
+.parseInfo .tabnav2 a:nth-child(2).active span.icony{background:url(../images/tabletupiana1.png) right center no-repeat;background-size:240% 99%;}
+.list_style2{background: white;margin-bottom: 10px;}
+.list_style2 li{background: white;border-bottom: 1px solid #ededed;margin: 0 10px;height: 50px;}
+
+
+.zltypelist>ul li.li2 .textCheck{
+  position: absolute;right: 0px;bottom: 0px;width: 50px;height: 40px;background: red;
+}
+.zltypelist>ul li.li2 .textCheck button{
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.zltypelist>ul li.li2 .textCheck button.active{
+  opacity: 0.5
+}
+
+
+/*2017.1.3*/
+.Historic{
+  min-height: 100%;
+  background: #ededed;
+}
+.Historic li{
+  position: relative;
+  padding: 10px 10px 10px 40px;
+  background: white url(../images/lishishijian.png) 10px center no-repeat;
+  background-size: 20px 20px;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+.Historic.Collecter li{
+  padding: 10px;
+  background: white;
+}
+.Historic li p{
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.Historic li>p:first-child{
+  margin-bottom: 5px;
+}
+.Historic li p.HistoricTime{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+p.historic{
+  background: #ededed;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.Historic li div{
+  overflow: hidden;
+}
+.Historic li div.dp>p{
+  float: left;
+  width: 33.33%;
+}
+.Historic li div.dp>p:nth-child(3n-2){
+  width: 40%;
+}
+.Historic li div.dp>p:nth-child(3n-1){
+  width: 40%;
+}
+.Historic li div.dp>p:nth-child(3n){
+  width: 40%;
+}
+.Historic li img{
+  width: 75px;
+  height: 70px;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  bottom: 10px;
+}
+.Historic.Collecter li img{
+  left:10px;
+}
+
+.Historic li div.imv{
+  margin-left: 85px;
+  min-height: 70px;
+  margin-right: 39px;
+  position: relative;
+}
+.Historic li div.imv p.imv{
+  position: absolute;
+  bottom: 0;
+}
+.Historic li button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.personalIndex .pIndex_part ul.jlsc{
+  overflow: hidden;
+  background: #1766b3;
+}
+.personalIndex .pIndex_part ul.jlsc li{
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  float: left;
+  margin: 0;
+  height: 75px;
+  padding: 10px 0;
+  line-height: inherit;
+  background: none;
+  width: 32%
+}
+.personalIndex .pIndex_part ul.jlsc li:first-child{
+  margin-left: 2%;
+}
+.personalIndex .pIndex_part ul.jlsc li span{
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 55px;
+}
+.personalIndex .pIndex_part ul.jlsc li img{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.personalIndex .pIndex_part ul.jlsc li.myHistory img{
+  width: 24px;
+}
+.personalIndex .pIndex_part ul.jlsc li:first-child>span{
+  border-right: 1px solid #5f95cb;
+}
+.personalIndex .pIndex_part ul.jlsc li:last-child>span{
+  border-left: 1px solid #5f95cb;
+
+}
+.personalIndex .pIndex_part ul.jlsc li span{
+  display: block;
+}
+.mendian .newForm input{
+  margin-left: 10px;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.mendian .newForm span{
+  width: 40%;
+  float: right;
+}
+
+.Historic.Collecter li>p{
+  margin-right: 50px;
+}
+
+.Historic.Collecter li>p.HistoricTime{
+  margin-right: 0;
+}
+.Historic span{
+  display: inline;
+}
+.Historic.Collecter li div.dp{
+  margin-right: 50px;
+}
+
+.shoucangtf .newstar{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+  background: url("../images/fengcangxing1.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 0px;
+}
+.shoucangtf.details{
+  position: fixed;
+  right: 0;
+  width: 50%;
+  height: 50px;background: #1766b3;
+  z-index: 2002;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  bottom: 0;
+  font-size: 16px;
+}
+.onlinetf.details{
+  position: fixed;
+  left: 0;
+  width: 50%;
+  height: 50px;
+  background: #1766b3;
+  z-index: 2002;
+  bottom: 0;
+
+}
+.onlinetf.details span{
+  display: block;
+  height: 46px;
+  margin: 2px;
+  background: white;
+  color: #1766b3;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px;
+}
+
+/*测试数据*/
+.shoucangtf .newstar{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+  background: url("../images/fengcangxing1.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 0px;
+}
+.shoucangtf .newstar.active{
+  display: inline-block;
+  background: url("../images/fengcangxing2.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.shoucangtf.testShoucang{
+  position: fixed;
+  right: 0;
+  width: 50%;
+  height: 50px;background: #1766b3;
+  z-index: 2002;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  bottom: 0;
+  font-size: 16px;
+}
+.onlinetf.testShoucang{
+  position: fixed;
+  left: 0;
+  width: 50%;
+  height: 50px;
+  background: #1766b3;
+  z-index: 2002;
+  bottom: 0;
+
+}
+.onlinetf.testShoucang span{
+  display: block;
+  height: 46px;
+  margin: 2px;
+  background: white;
+  color: #1766b3;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px;
+}
+
+/*资料大全*/
+.shoucangtf.yuncang .newstar{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+  background: url("../images/yuncangxing1.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 0px;
+}
+.shoucangtf.yuncang .newstar.active{
+  background: url("../images/yuncangxing2.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.shoucangtf.yuncang{
+  position: absolute;
+  right: 10px;
+  z-index: 1000;
+  color: #333;
+  text-align: center;
+  bottom: 0;
+  font-size: 16px;
+}
+.shoucangtf.yuncang.yuncangziliao{
+  right: 10px;
+  bottom: 10px;
+}
+
+/*系统部件*/
+.shoucangtf.detalsTable .newstar{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background: url("../images/yuncangxing1.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 0px;
+}
+.shoucangtf.detalsTable .newstar.active{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background: url("../images/yuncangxing2.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 0px;
+}
+.shoucangtf.detalsTable{
+  position: absolute;
+  right:10px;
+  z-index: 2012;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  height: 44px;
+  line-height: 44px;
+}
+
+.onlinetf.detalsTable{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #1766b3;
+  z-index: 3000;
+  bottom: 0;
+
+}
+.onlinetf.detalsTable span{
+  display: block;
+  height: 46px;
+  margin: 2px;
+  background: white;
+  color: #1766b3;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px;
+}
+
+
+/*.shoucangtf.clineName2 .newstar{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background: url("../images/yuncangxing1.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+.shoucangtf.clineName2 .newstar.active{
+  background: url("../images/yuncangxing2.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.shoucangtf.clineName2{
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  color: #333;
+  text-align: center;
+  bottom: 0;
+  font-size: 16px;
+}*/
+.firstTr{
+  position: relative;
+}
+
+
+
+/*20170109*/
+.coupontab a span.icony{
+  display: none;
+  width: 0;
+  height: 0;
+}
+.coupontab a:nth-child(1){
+  margin-right: 0;
+}
+.coupontab a:nth-child(1).active span.word{
+  background: none;
+}
+.coupontab a:nth-child(2).active span.word{
+  background: none;
+}
+.coupontab a:nth-child(3).active span.word{
+  background: none;
+}
+.coupontab a.active span.word{
+  border-bottom: 2px solid #206DB5;
+}
+.coupontab a span.word{
+  display: block;
+}
+.coupontab a{
+  position: relative;
+}
+.coupontab a:first-child .number{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: red;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
+  right: 10px;
+  top: 5px;
+}
+
+.coupon .couponQuan{
+  position: relative;
+  margin: 10px;
+}
+.coupon .couponQuan img{
+  width: 100%;
+}
+.coupon{
+  background: #ededed;
+}
+.coupon .couponQuan span{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    left: 11.3%;
+    bottom: 15%;
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+}
+.coupon .couponPingtai>div{
+  position: relative;
+  margin: 10px;
+}
+.coupon .couponPingtai>div img{
+  width: 100%;
+}
+.coupon .couponPingtai>div ul{
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.coupon .couponPingtai>div li{
+  float: left;
+}
+.coupon .couponPingtai>div li:first-child{
+  width: 35%;
+}
+.coupon .couponPingtai>div li:last-child{
+  width: 65%;
+  padding-top: 10%;
+  margin-left: -10px;
+}
+.coupon .couponPingtai>div li p{
+  color: white;
+  font-size: 10px;
+}
+.coupon .couponPingtai>div li:first-child p{
+  width: 100%;
+  text-align: center;
+  margin-top: 99%;
+  font-size: 10px;
+}
+.coupon .couponPingtai>div li:first-child p span{
+  font-size: 10px;
+}
+.coupon .couponPingtai>div li:last-child p.quanPrice{
+  font-size: 26px;
+  margin: 3% 0;
+}
+
+.natureCheck{
+  overflow: hidden;
+}
+.natureCheck>div{
+  float: left;
+}
+.natureCheck>div.natureTab{
+  width: 40%;
+  background: #ededed;
+}
+.natureCheck>div.natureList{
+  width: 60%;
+}
+.natureCheck>div.natureTab li{
+  height: 40px;
+  line-height: 40px;
+  margin: 0 5px;
+  border-bottom: 1px solid white;
+  text-indent: 10px;
+  position: relative;
+}
+.natureCheck>div.natureTab li span:first-child{
+  width: 5px;
+  position: absolute;left: -5px;top: 0;
+  height: 40px;
+  background: #1766B3;
+  display: none;
+}
+.natureCheck>div.natureTab li span:last-child{
+  width: 5px;
+  position: absolute;right: -5px;top: 0;
+  height: 40px;
+  background: white;
+  display: none;
+}
+.natureCheck>div.natureTab li.active span:first-child{
+  display: block;
+}
+.natureCheck>div.natureTab li.active span:last-child{
+  display: block;
+}
+.natureCheck>div.natureTab li.active{
+  background: white;
+}
+.natureCheck>div.natureList li{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.natureCheck>div.natureList li.others{
+  line-height: 20px;
+}
+.natureIndex div.saveBtn{
+  margin: 20px 25px;
+}
+.natureIndex div.saveBtn button{
+  background: #b71c24;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+}
+
+.vuetagger-list{
+  background: #1766b3;
+  padding-bottom: 10px;
+  border-bottom: 20px solid #ededed;
+}
+.natureIndex{
+  background: white;
+}
+.natureIndex .vuetagger-tag{
+  padding: 0;
+  background: white;
+}
+.vuetagger-list .vuetagger-tag{
+  width: 28%;
+  height: 34px;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 34px;
+  margin: 10px 2.66% 0;
+  padding: 0;
+  position: relative;
+  background: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.vuetagger-tag .vuetagger-tag-remover{
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  width: 24px;
+  height: 24px;
+  color: white;
+  background: #ddd;
+  border-radius: 12px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 20px;
+  padding: 0;
+  margin-left: 0;
+}
+.natureIndex .vuetagger{
+  padding: 0;
+}
+.couponCash{
+  height: 14.5%;
+}
+.couponCash .couponB{
+  height: 100%;
+}
+.couponB{
+  margin: 10px 10px 17px 10px;
+  position: relative;
+  height: 13.5%;
+}
+.couponCash img{
+  width: 100%;
+}
+.couponB>img{
+  width: 100%;
+}
+.couponB>div{
+  position: absolute;
+  z-index: 10;
+}
+/*.couponCash .couponB>div:nth-child(2){*/
+  /*line-height: 16px;*/
+/*}*/
+.couponB>div:nth-child(2){
+  width: 70%;
+  left: 5%;
+  height: 100%;
+  top:0%;
+  z-index: 10;
+}
+.couponB>div:last-child{
+  width: 27%;
+  left: 70%;
+  top:15%;
+  z-index: 10;
+}
+.couponIndex{
+  background: #EDEDED;
+}
+.couponB>div:nth-child(2) p{
+  font-size: 10px;
+  color: #828282;
+}
+.couponB>div:nth-child(2) p.nosouce{
+  color: #C13E3E;
+}
+.couponB>div:nth-child(2) p:first-child{
+  font-size: 15px;
+  color: #000;
+}
+.couponBleft{
+  display: table;
+}
+.couponBleft>div:first-child{
+  display: table-cell;
+  vertical-align: middle;
+}
+.couponB>div:last-child p{
+  color: white;
+  font-size:18px;
+  margin-left: 10%;
+}
+.couponB>div:last-child p:last-child{
+  font-size: 14px;
+
+}
+
+.businessS{
+  overflow: hidden;
+}
+.businessS ul{
+  margin:10px 10px;
+}
+.businessStat{
+  background: #ededed;
+}
+.businessS li{
+  float: left;
+  width: 30%;
+  background: white;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  /*animation:bounce .5s infinite;*/
+
+}
+.businessS li:nth-child(3n-1){
+  margin: 0 5% 10px;
+}
+/*@-webkit-keyframes bounce {*/
+  /*0%  {box-shadow: 0 0 0px 0px white;font-size: 14px;}*/
+  /*50% {box-shadow: 0 0 2px 2px #4f56d4;font-size: 13px;}*/
+  /*100% {box-shadow: 0 0 0px 0px white;font-size: 14px;}*/
+/*}*/
+
+.businessStat.natureIndex div.saveBtn{
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  left: 10%;
+  margin-left: 0;
+}
+.shoucangtf.yuncang.styleYun{
+  right: 10px;
+  bottom:2px;
+}
+.selfcollect li .con .tit2{
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  /*text-overflow: ellipsis;*/
+}
+.sosoList.Collecter li{
+  padding: 0 10px 20px 10px;
+
+}
+.sosoList.Collecter li p:first-child{
+  min-height: 30px;
+  line-height: 30px;
+}
+.intergalRules>div{
+  background: white;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #CCCCCC;
+}
+.intergalRules>div>p:first-child{
+  font-size: 18px;
+  color: #000000;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #CCCCCC;
+  background: url("./../images/cutLeft.png") 0px center no-repeat;
+  background-size: 5px 20px;
+}
+.intergalRules>div p{
+  font-family: '微软雅黑', serif;
+  font-size: 14px;
+  color: #333333;
+}
+.intergalRules>div>p:nth-child(2){
+  padding: 10px 0px 20px;
+}
+.intergalRules>div>p{
+  margin: 0 10px;
+}
+
+.intergalRules>div ul{
+  position: relative;
+  margin:10px 10px 20px;
+  border-top: 1px solid #e6e6e6;
+}
+.intergalRules>div ul:nth-child(2){
+  border-top: none;
+}
+
+.jlsc.changs li:first-child a{
+  background: url('../images/shoucangindex.png') center 0 no-repeat;
+  background-size: 30px 30px;
+  color: white;
+  padding-top: 35px;
+
+}
+.jlsc.changs li:last-child a{
+  background: url('../images/qiandaoindex.png') center 0 no-repeat;
+  background-size: 30px 30px;
+  padding-top: 35px;
+  color: white;
+
+}
+
+.jlsc.changs li:nth-child(2) a{
+  background: url('../images/mendianindex.png') center 0 no-repeat;
+  background-size: 30px 30px;
+  padding-top: 35px;
+  color: white;
+
+}
+.jlsc.changs li a{
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  line-height: 20px;
+}
+.intergalRules>div li p{
+  margin-bottom: 7px;
+}
+.addAddress div.country span.pleaseCheck{
+  position: absolute;
+  right:20px;
+  top: 0px;
+  color: #8f8f8f;
+}
+.nocllection{
+  position: relative;
+  z-index: 10000;
+  text-align: center;
+}
+.nocllection img{
+  margin: 80px 0 30px;
+}
+.newForm.news span{
+  width: 56px;
+}
+.newForm.news input{
+  width: 70%;
+}
+
+/*电喷百科*/
+.cycSearch{
+  overflow: hidden;
+  position: relative;
+  z-index: 300;
+  background: white;
+}
+.cycSearch.result{
+  padding: 0;
+}
+.cycSearch{
+  border-bottom: 10px solid #e6e6e6;
+}
+.cycSearch>div{
+  margin: 10px 3%;
+  border: 1px solid #e6e6e6;
+  position: relative;
+}
+.cycSearch>div.searchTabList{
+  border: none;
+}
+.cycSearch input{
+  height: 40px;
+  text-indent: 10px;
+  width: 70%;
+}
+.cycSearch button.active{
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  color:white;
+  background: #b71c24 ;
+}
+.cycSearch button{
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  background: #b71c24 url(../images/cycSearch.png) center center no-repeat;
+  background-size: 25px 25px;
+}
+.cycList{
+  padding-top: 10px;
+  position: relative;
+}
+.cycList ul:first-child{
+  position: absolute;
+  width: 123px;
+  min-height: 300px;
+  background: #b71c24;
+}
+.cycList ul:first-child li{
+  height: 45px;
+  border: 3px solid #b71c24;
+  border-right: none;
+  color: white;
+  line-height: 17px;
+  border-bottom: 1px solid #97181e;
+  display: table;
+  padding:0 5px;
+  width: 110px;
+}
+.cycList ul:first-child li span{
+  display: block;
+  margin: 0 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.cycList ul:first-child li.active{
+  background: white;
+  color: #97181e;
+}
+.cycList ul:last-child{
+  margin: 0 0 0 133px;
+  padding-right: 10px;
+}
+.cycList ul:last-child li{
+  height: 48px;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.cycList ul:last-child li p{
+  width: 100%;
+  height: 100%;
+  display: table;
+  margin: 0 5px;
+}
+.cycList ul:last-child li span{
+  display: table-cell;
+  vertical-align: middle;
+
+}
+.cycSearch>div.resultMation{
+  border: none;
+  margin: 0;
+  height: 30px;
+}
+.resultMation p{
+  height: 30px;
+  text-align: center;
+  color: #8f8f8f;
+}
+.resultTabList{
+  border-bottom: 1px solid #e6e6e6;
+}
+.resultTabList>div{
+  margin: 10px;
+}
+.resultTabList div p.Title{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.resultTabList div p.Mation{
+  color: #8f8f8f;
+  margin-bottom:10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 85px;
+
+}
+.resultTabList div p.Mation img{
+  max-width: 100%;
+}
+.resultTabList div.keyAndrule{
+  position: relative;
+  min-height: 20px;
+}
+.resultTabList div.keyAndrule div.key{
+  margin-right: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.resultTabList div.keyAndrule div.key span{
+  padding: 2px 3px;
+  background: #e5e5e5;
+  color: #939393;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.resultTabList div.keyAndrule div.rule{
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+.resultTabList div.keyAndrule div.rule img{
+  vertical-align: middle;
+  width: 18px;
+  margin-top: -2px;
+}
+.resultTabList div.keyAndrule div.rule span{
+  color: #8f8f8f;
+}
+.cycSearch>div.resultTabMation{
+  border:none;
+  margin: 0 10px;
+  height: 50px;
+}
+.cycSearch>div.resultTabMation p{
+  color: #b71c24;
+  font-size: 16px;
+}
+.cycSearch>div.resultTabMation span{
+  color: #8f8f8f;
+}
+.uploadMore{
+
+  height: 60px;
+  margin: 10px 10px 0;
+}
+.uploadMore button{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  background: #ba252d;
+  height: 40px;
+}
+.clearHistory{
+  height: 35px;
+  background: #EDEDED;
+}
+.clearHistory button{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+.noMation{
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background: #E6E6E6;
+}
+.searchTabList{
+  margin: 0 3%;
+  width: 94%;
+}
+.searchTabList>div{
+  background: white;
+}
+.searchTabList>div ul{
+  border-top: none;
+}
+.searchTabList>div ul li{
+  margin: 0 10px;
+  height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.searchTabList>div ul li p{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.searchTabList>div ul li p span{
+  display: table-cell;
+  vertical-align: middle;
+}
+.cycList *{
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: inherit;
+}
+.cycSearch *{
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: inherit;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-corner {
+  background-color:rgba(0, 0, 0, 0);
+}
+.cycSearch .clearHistory button{
+  background: #CCCCCC;
+  color: white;
+  width: 50px;
+  height: 25px;
+  text-align: center;
+  right: 10px;
+  top: 5px;
+}
+.cycSearch .clearHistory button.close{
+  right: 70px;
+}
+.cycSearch .clearHistory span{
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  height: 25px;
+  line-height: 25px;
+  color: #8f8f8f;
+}

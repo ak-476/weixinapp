@@ -1,0 +1,64 @@
+<template>
+  <div  style="background: #ededed;height: 100%;overflow: scroll">
+    <swiper>
+      <swiper-slide>
+        <img src="../../../assets/images/news/news01.jpg" style="height: 200px" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../../assets/images/news/news02.jpg" style="height: 200px" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../../assets/images/news/news03.jpg" style="height: 200px" alt="" />
+      </swiper-slide>
+    </swiper>
+
+    <div v-for="o in resultList" class="list_mes">
+      <ul>
+        <li>
+          <a :href="o.url">
+            <img :src="o.picUrl" alt="">
+          </a>
+        </li>
+        <li>
+          <a :href="o.url">
+            <p>
+              <span>{{o.title}}</span>
+            </p>
+            <p>{{o.description}}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script type="text/babel">
+  import { Swipe, SwipeItem } from 'mint-ui';
+
+  export default{
+    data(){
+      return {
+        resultList: [],
+        imageItems: [
+          {content: '/static/img/news01.jpg'},
+          {content: '/static/img/news02.jpg'},
+          {content: '/static/img/news03.jpg'}
+        ]
+      }
+    },
+    mounted() {
+      let that = this;
+      that._Util.post(that._Api.POST_LECTURE_ROOM_SHARE, {newsType: 3}, (data) => {
+        that.resultList = data;
+      }, () => {
+
+      }, that);
+
+    },
+    components: {
+      Swipe,
+      SwipeItem
+
+    }
+  }
+</script>

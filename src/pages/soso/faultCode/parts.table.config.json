@@ -1,0 +1,76 @@
+{
+  "Pump": [
+    {"title": "油泵型号", "name": "pmodel"},
+    {"title": "主机厂", "name": "zjcn"},
+    {"title": "油量计量单元", "name": "unit"},
+    {"title": "高压组件", "name": "pressure"},
+    {"title": "齿轮泵（叶片泵）", "name": "gear"},
+    {"title": "溢流阀", "name": "tap"},
+    {"title": "转速传感器", "name": "speed1"},
+    {"title": "类型", "name": "part"},
+    {"title": "名称", "name": "name"},
+    {"title": "替用件", "name": "zcth"}
+  ],
+  "Product": [
+    {"title": "喷油器型号", "name": "pyq"},
+    {"title": "主机厂", "name": "zjcn"},
+    {"title": "油嘴编号", "name": "yz"},
+    {"title": "油嘴刻印号", "name": "yzsn"},
+    {"title": "阀组件号", "name": "fz", "reg": ""},
+    {"title": "密封球型号", "name": "mfq"},
+    {"title": "球座型号", "name": "qz"},
+    {"title": "电磁铁型号", "name": "dct"},
+    {"title": "衔铁组件型号", "name": "xtzj"},
+    {"title": "高压密封圈型号", "name": "gymfq", "reg": ""},
+    {"title": "OHK套件型号", "name": "ohk", "className": "aClass"},
+    {"title": "总成替换产品", "name": "zcth", "reg": ""}
+  ],
+  "Rail": [
+    {"title": "油轨型号", "name": "smodel"},
+    {"title": "主机厂", "name": "zjcn"},
+    {"title": "匹配系统压力", "name": "pressure"},
+    {"title": "轨压传感器类别", "name": "ptype"},
+    {"title": "轨压传感器型号", "name": "pmodel", "reg": ""},
+    {"title": "泄压阀型号", "name": "xmodel"},
+    {"title": "压力控制阀型号", "name": "pymodelyq"}
+  ],
+  "Ecu": [
+    {"title": "ECU型号", "name": "ecu_no"},
+    {"title": "类型", "name": "ptype"},
+    {"title": "名称", "name": "name"},
+    {"title": "替用件", "name": "zcth"}
+  ],
+  "Delphi": [
+    {"title": "喷油器型号", "name": "pyq"},
+    {"title": "主机厂商", "name": "engineCompany"},
+    {"title": "发动机型号及应用", "name": "engineModel", "reg": ""},
+    {"title": "油嘴型号", "name": "yzModel", "reg": ""},
+    {"title": "阀组件型号", "name": "fzjModel", "reg": ""},
+    {"title": "总成替换产品", "name": "totalReplace"},
+    {"title": "客户号", "name": "customerNo"}
+  ],
+  "Dzpyq": [
+    {"title": "喷油器型号", "name": "pyq"},
+    {"title": "主机厂商", "name": "zj"},
+    {"title": "发动机型号", "name": "fdj"},
+    {"title": "应用", "name": "app"},
+    {"title": "油嘴型号", "name": "yz"},
+    {"title": "阀片型号", "name": "fp"},
+    {"title": "密封圈套装", "name": "mfq"},
+    {"title": "油嘴紧帽", "name": "jzjm"},
+    {"title": "总成替换产品", "name": "zcth"}
+  ],
+  "Ohk": [
+    {"title": "OHK套件型号", "name": "ohk"},
+    {"title": "阀组件型号", "name": "fzj"},
+    {"title": "油嘴型号", "name": "yz"},
+    {"title": "密封圈", "name": "mfq"},
+    {"title": "支撑圈", "name": "zcq"}
+  ],
+  "Sensor": [
+    {"title": "传感器型号", "name": "sensorNo"},
+    {"title": "类型", "name": "ptype"},
+    {"title": "名称", "name": "name"},
+    {"title": "替用件", "name": "zcth"}
+  ]
+}

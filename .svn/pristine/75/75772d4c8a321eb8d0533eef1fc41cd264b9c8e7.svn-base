@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <!--<meta http-equiv="Cache-Control" content="no-cache"/>-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport"/>
+  <meta name="MobileOptimized" content="240"/>
+  <title>共轨之家</title>
+
+  <script type="text/javascript">
+    window.onerror = function (message, url, lineNo, colNo, error) {
+      var userAgent = navigator.userAgent;
+      var content = message + '<---->' + error.stack.toString();
+      //alert(message);
+      //alert(message + '<--error-->' + content.toString());
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+
+          } else {
+
+          }
+        }
+      };
+      var urlLocal = 'http://192.168.11.58:9999/error/add.json',
+        urlOnline = 'http://wx.51gonggui.com/commonrail/error/add.json';
+      xhr.open('POST', urlOnline, true);
+      xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+      xhr.send(JSON.stringify({content: content, userAgent: userAgent}));
+    };
+
+
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function () {
+      _vds.push(['setAccountId', '80f60f7c6dd31fad']);
+      _vds.push(['enableHT', true]);
+      (function () {
+        var vds = document.createElement('script');
+        vds.type = 'text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+</head>
+
+<body id="bogy">
+<div id="app" style="height: 100%;overflow-y: scroll">
+
+</div>
+</body>
+</html>

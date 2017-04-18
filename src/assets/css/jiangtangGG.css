@@ -1,0 +1,278 @@
+.hut_bg1{
+  background: #ededed;
+}
+
+/*小轨特训*/
+nav.texun_header{
+  background: white;
+  margin-top: 10px;
+}
+nav.texun_header>ul{
+  overflow: hidden;
+}
+nav.texun_header>ul li{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+nav.texun_header>ul li>a{
+  display: inline-block;
+  width: 100%;
+  padding-top: 10px;
+}
+nav.texun_header>ul li>a span{
+  color: #8f8f8f;
+}
+nav.texun_header>ul li>.texunJJ .span1{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/TXxg.png) 0 center no-repeat;
+  background-size: 425% 100%;
+}
+nav.texun_header>ul li>.texunJJ .span2{
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 7px;
+}
+nav.texun_header>ul li>.texunJJ.active .span1{
+  background: url(../images/TXxg2.png) 0 center no-repeat;
+  background-size: 425% 100%;
+}
+nav.texun_header>ul li>.texunJJ.active .span2{
+  background: url(../images/Htitb.png) 0 center no-repeat;
+  background-size: 100% 100%;
+  color: #0066cc;
+}
+nav.texun_header>ul li>.texunBM .span1{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/TXxg.png) -25px center no-repeat;
+  background-size: 425% 100%;
+}
+nav.texun_header>ul li>.texunBM .span2{
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 7px;
+}
+nav.texun_header>ul li>.texunBM.active .span1{
+  background: url(../images/TXxg2.png) -25px center no-repeat;
+  background-size: 425% 100%;
+}
+nav.texun_header>ul li>.texunBM.active .span2{
+  background: url(../images/Htitb.png) 0 center no-repeat;
+  background-size: 100% 100%;
+  color: #0066cc;
+}
+nav.texun_header>ul li>.texunKJ .span1{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/TXxg.png) -49px center no-repeat;
+  background-size: 412% 100%;
+}
+nav.texun_header>ul li>.texunKJ .span2{
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 7px;
+}
+nav.texun_header>ul li>.texunKJ.active .span1{
+  background: url(../images/TXxg2.png) -49px center no-repeat;
+  background-size: 412% 100%;
+}
+nav.texun_header>ul li>.texunKJ.active .span2{
+  background: url(../images/Htitb.png) 0 center no-repeat;
+  background-size: 100% 100%;
+  color: #0066cc;
+}
+nav.texun_header>ul li>.texunPJ .span1{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/TXxg.png) -68px center no-repeat;
+  background-size: 370% 100%;
+}
+nav.texun_header>ul li>.texunPJ .span2{
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 7px;
+  color: #8f8f8f;
+}
+nav.texun_header>ul li>.texunPJ.active .span1{
+  background: url(../images/TXxg2.png) -68px center no-repeat;
+  background-size: 370% 100%;
+}
+nav.texun_header>ul li>.texunPJ.active .span2{
+  background: url(../images/Htitb.png) 0 center no-repeat;
+  background-size: 100% 100%;
+  color: #0066cc;
+}
+.texun_listmes{
+  border-top: 1px solid #e6e6e6;
+  background: white;
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+.texun_listmes>div{
+  display: none;
+}
+.texun_listmes>div.active{
+  display: block;
+}
+
+.texun_listmes>div>ul{
+  overflow: hidden;
+}
+.texun_listmes>div.list_texunJJ>ul>li{
+  float: left;
+}
+
+.texun_listmes>div.list_texunJJ>ul>li:nth-child(1) {
+  width: 6px;
+  height: 6px;
+}
+.texun_listmes>div.list_texunJJ>ul>li:nth-child(2) {
+  width: 92%;
+  margin-left: 10px;
+  color: #8f8f8f;
+  font-size: 14px;
+  line-height: 18px;
+}
+.texun_listmes>div>ul>li:nth-child(1)>span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 3px;
+  background: #8f8f8f;
+}
+.list_texunBM>p{
+  color: #8f8f8f;
+  line-height: 20px;
+}
+.list_texunBM a:nth-child(2){
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: #d41117;
+  border-radius: 5px;
+  margin: 30px 0 10px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+.list_texunBM a:nth-child(3){
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  line-height: 40px;
+  text-align: center;
+  border:1px solid #1766b3;
+}
+.texun_listmes>div>ul.list_style1 a p{
+  color: #8f8f8f;
+}
+.texun_listmes>div>ul.list_style1>li{
+  border-bottom: 1px solid #cccccc;
+}
+.texun_listmes>div>ul.list_style1>li a{
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: url(../images/gradeHa.png) right center no-repeat;
+  background-size:10px 20px;
+}
+.list_texunPJ form>p{
+  color: #8f8f8f;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.list_texunPJ form>div.divecesput{
+  height: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+.list_texunPJ form>div.divecesput>input{
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  color: #8f8f8f;
+  font-size: 14px;
+}
+.list_texunPJ form>div.btn{
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.list_texunPJ form>div.btn>input{
+  background: #d41117;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.list_style2{
+  margin-bottom: 10px;
+  background: white;
+}
+.list_style2 li{
+  background: white;
+  height: 50px;
+  margin: 0 10px;
+  border-bottom:1px solid #ededed;
+}
+
+.list_style2 li a span{
+  float: right;
+  margin-right:20px;
+}
+
+/*小轨动态*/
+.table_ac{overflow: hidden;position: relative;z-index: 30;margin:0px 10px;border-radius: 5px;background: #d6d6d6;box-shadow: 0 1px 1px #656464 inset;}
+.table_qieke{padding: 10px 0;width: 100%;height: 60px;background: #ededed;}
+.table_ac a{float: left;width: 50%;text-align: center;line-height: 40px;color: #4d4d4d;font-size:20px;display: inline-block;border-radius: 5px;overflow: hidden;text-decoration: none; }
+.table_ac a.active{color:white;background: #4363ac;border:1px solid #a3a1a1;border-bottom: none;}
+.list_to{width: 87%;margin: 0 auto;border:1px solid #dadada;}
+.ksj_xg{display: none;}
+.foot{height: 20px;background: #ededed;}
+.custom{box-shadow: 0 10px 10px black inset;z-index: 10;}
+.custom li{position: relative;}
+.custom li span.xmz{position: absolute;left: 10px;bottom: 2px;color: white;z-index: 4;}
+.custom li span.xm{position: absolute;left: 0px;bottom: 0px;width: 100%;z-index: 2;height: 30px;box-shadow: 0 -15px 15px black inset;}
+.list_mes ul{overflow: hidden;}
+.list_mes li{float: left;min-height: 70px;}
+.list_mes li:nth-child(1){width: 65px;}
+.list_mes li:nth-child(2){width: 70%;margin-left: 10px;}
+.list_mes li img{width: 100%;}
+.list_mes{background: white;padding: 10px 0;margin-bottom: 10px;}
+.list_mes ul{margin:0 10px;}
+.list_mes li p{color: #909090;}
+.list_mes li p:nth-child(1){color: #333;font-size: 16px;}
+.list_mes li p:nth-child(2){font-size: 12px;}
+
+.list_mes li p:nth-child(2){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.list_mes li p:nth-child(1){
+  overflow : hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}

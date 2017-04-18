@@ -1,0 +1,157 @@
+<template>
+  <div>
+    <div class="cycSearch">
+      <div>
+        <input id="keyword" v-model="keyword" type="text"  @click="getTabList()" placeholder="请输入想要搜索的文章">
+        <button @click="search(keyword)" :class="{ active: keyword == '' && showTabList}">{{ cancal }}</button>
+      </div>
+      <div class="clearHistory"  v-if="showTabList && searchHistory.length > 0">
+        <span>历史记录</span>
+        <button  @click="removeSearchHistory()">清空</button>
+      </div>
+      <div class="searchTabList"  v-if="showTabList">
+        <div>
+          <ul>
+            <li v-for="o in searchHistory" @click="searchListValue(o)" v-if="searchHistory.length > 0">
+              <p>
+                <span>{{ o }}</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="cycList" v-if="!showTabList">
+      <div>
+        <!-- 左侧列表 -->
+        <ul :style='{ height : listLeftHeight}'>
+          <li v-for="(v,index) in firstMenu" @click="firstMenuCheck(v,index)" :class="{active: index == firstMenuId}">
+            <span>{{ v.title }}</span>
+          </li>
+        </ul>
+
+        <!-- 右侧列表 -->
+        <ul :style='{ height : listLeftHeight}' style="overflow-y: scroll;-webkit-overflow-scrolling: touch;">
+          <li v-for="o in secondMenu" @click="secondMenuCheck(o)">
+            <p>
+              <span>{{ o.title }}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="noMation"  v-if="showTabList && searchHistory.length > 0"></div>
+
+  </div>
+</template>
+<script type="text/babel">
+  export default{
+    data(){
+      return {
+        listLeftHeight:0,
+        secondId:0,
+        firstMenu:[],
+        secondMenu:[],
+        keyword:'',
+        checkIndex: 0,
+        showTabList: false,
+        searchHistory: [],
+        hisBottm: 0,
+        cancal: '',
+        firstMenuId: parseInt(this.$route.query.firstId || 0)|| 0
+,      }
+    },
+    mounted(){
+      let that = this;
+      that.searchHistory =  that._Util.getLocalStorage('searchTabListValue') || [];
+      that.listLeftHeight = document.body.offsetHeight - 82 +'px';
+      that._Util.post(that._Api.POST_ELECT_ARTICLE_CATALOGUELIST, { parentId : 0} , (data) =>{
+        that.firstMenu = data;
+        that.getSecondMenu(data[that.firstMenuId])
+      }, () =>{},that)
+
+    },
+    methods:{
+      getSecondMenu(v){
+        let that = this;
+        that._Util.post(that._Api.POST_ELECT_ARTICLE_CATALOGUELIST, { parentId : v.id} , (data) =>{
+          that.secondMenu = data;
+        }, () =>{},that)
+      },
+      firstMenuCheck(v,index){
+        this.$router.replace({ query :{firstId: index}})
+        this.firstMenuId = parseInt(this.$route.query.firstId);
+        this.checkIndex = index;
+        this.getSecondMenu(v)
+      },
+      secondMenuCheck(o){
+        this._Util.setLocalStorage('secondTitle', o.title)
+        this.$router.push({name: 'cyclopeResult', query: {checkId: o.id,firstId: this.firstMenuId, title: o.title, type: this.$route.query.type}});
+      },
+      search(){
+        if(this.cancal == '取消'){
+          this.showTabList = false;
+          this.cancal = '';
+          return;
+        }if(this.keyword.length <2){
+          this._Util.showMsgBox('请至少输入两个字符');
+          return;
+        }
+        if(!this.keyword){
+          this._Util.showMsgBox('搜索内容不能为空');
+          return;
+        }
+        if (this.searchHistory.indexOf(this.keyword) == -1) {
+          this.searchHistory.unshift(this.keyword);
+          this._Util.setLocalStorage('searchTabListValue', this.searchHistory);
+        }
+        this.showTabList = false;
+        this.$router.push({name: 'cyclopeResult', query:{ keyword: this.keyword, checkId: -1, type: this.$route.query.type}})
+        this.keyword = '';
+      },
+      getTabList(){
+        if(this.searchHistory.length > 0){
+          console.log(1)
+          this.showTabList = true;
+          if(!this.keyword ){
+            this.cancal = '取消'
+          } else {
+            this.cancal = ''
+          }
+        }
+      },
+      searchListValue(o){
+        this.showTabList = false;
+        this.keyword = o;
+        this.$router.push({name: 'cyclopeResult', query:{ keyword: this.keyword,checkId: -1, type: this.$route.query.type}})
+      },
+      removeSearchHistory(){
+        this._Util.showMsgBoxConfirm('是否确定清空历史记录',(action) =>{
+          if(action){
+            this._Util.removeLocalStroageByKey('searchTabListValue');
+            this.searchHistory =  this._Util.getLocalStorage('searchTabListValue') || [];
+            this.showTabList = false;
+            this.cancal = '';
+          }
+        })
+
+      },
+      closeHistory(){
+        this.showTabList = false;
+      },
+      _stopDef(e){
+        e.preventDefault()
+      },
+    },
+    watch:{
+      keyword(){
+        this.getTabList()
+      }
+    },
+    components: {}
+  }
+</script>

@@ -1,0 +1,89 @@
+.btn:hover{ color:#fff;}
+.btn_red{ background-color:#ab1a2b;}
+.btn_large{ width:100%; text-align:center;}
+.btn_redlight{ background-color:#d41116;}
+.btn_redborder,.btn_redborder:hover{ background-color:#fff; border:solid 1px #d41116; color:#d41116; padding:9px 25px;}
+
+.window_shadow{ position:fixed;left:0; top:0; bottom:0; right:0;  z-index:2000; display:none; background-color:#fff; }
+.windowwrap{ position:absolute; width:100%; min-height:100%; left:0; top:0;  z-index:2001; display:none; background-color:#fff; }
+.window{ background:#fff; width:100%; margin:0 auto; max-width:800px; min-width:310px; padding-bottom:15px; padding-top:51px;}
+.window input[type="text"]{ border-radius:5px;}
+.windowtt{     background-color: #45629e;color:#fff; padding:15px 30px 15px 10px; position:fixed; top:0; left:0; z-index:2100;  font-size:14px;  width:100%;overflow:hidden; text-overflow:ellipsis; -webkit-text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.window_close{ position:absolute; right:10px; top:50%; margin-top:-7px;}
+.window_close img{ width:15px;}
+
+::-moz-placeholder { color:#979797; font-size:14px; }
+::-webkit-input-placeholder { color:#979797; font-size:14px;  }
+:-ms-input-placeholder { color:#979797; font-size:14px;  }
+
+.texunlist ul{ padding:20px 10px;}
+.texunlist li{ margin-bottom:10px;}
+.texunlist .tt{ background-color:#0069b4; padding:10px; color:#fff; position:relative; display:block;}
+.texunlist .tt .arrow{ position:absolute; right:10px; top:50%; margin-top:-4px; display:block;
+                       background:url(../images/icon_arrow1.png) no-repeat; background-size:100% 100%; width:15px; height:8px;}
+
+.texun_inner{ border:solid 1px #ccc; padding:10px; display:none;}
+.texun_link p{ background:url(../images/arrow_r.png) no-repeat 97% 50%; background-size:10px 16px; padding:10px 20px 10px 0; border-bottom:solid 1px #ccc;}
+.texun_link p:last-child{ border-bottom:none;}
+.texun_link p a{ display:block; color:#333333;}
+
+.texunlist .active .tt{ background-color:#d41116;}
+.texunlist .active .tt .arrow{ background-image:url(../images/icon_arrow2.png);}
+.texunlist .active .texun_inner{ display:block;}
+
+.texunlist .spesial .tt .arrow{ background-image:url(../images/icon_arrow3.png); width:8px; height:15px; margin-top:-7px;}
+
+.tabnav{ background-color:#45629e; padding:0 10px;}
+.tabnav a{ display:inline-block; padding:10px; color:#f0f0f0;}
+.tabnav a.active{ background-color:#f0f0f0; color:#45629e;}
+.tabnav2 a.active{ background-color:#fff;}
+
+.select{ width:100%; padding:10px; border:solid 1px #ccc; color:#979797;background:url(../images/icon_arrowd2.png) no-repeat 97% 50%; background-color:#fff;
+         background-size:15px 8px; padding:10px 20px 10px 10px;overflow:hidden; text-overflow:ellipsis; -webkit-text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.col{padding:10px 10px 0;}
+.col li{ margin-bottom:10px;}
+.col2 ul{ margin-left:-10px;}
+.col2 li{ width:50%; padding-left:10px; float:left;}
+.col1 li{ width:100%;}
+.col1 li input[type="text"],.col1 li textarea{ border:solid 1px #ccc; padding:10px; color:#979797; display:block; width:100%; background-color:#fff;}
+.textarea{ position:relative;}
+.textarea textarea,.textarea .placeholder{ height:100px;}
+.textarea .placeholder{ padding:10px; position:absolute; left:0; top:0;color:#979797; width:100%; }
+.graytips{ padding:10px 15px;}
+.tabshow{min-height:80%;}
+.tabshow>div{ display:none; }
+
+.search{ padding-top:35px;}
+.search li input[type="text"]{ padding:15px 10px; border-radius:3px; }
+.serchicon{ height:100px;}
+.search .btn{ padding:15px 10px;}
+.search .tips{ line-height:1em;}
+.tips p{ font-size: 13px}
+.col3 ul{ margin-left:-10%;}
+.col3 li{ width:33.33%; padding-left:10%; float:left;}
+.blockswrap li p{ display:block; border:solid 1px #afafaf; text-align:center; padding:10px 0; border-radius:5px; color:#333333;}
+
+.list1 li{ position:relative; padding-left:80px;}
+.list1 li label{ position:absolute; left:0; top:0; padding:10px 0;}
+
+.result{ padding:10px;}
+.result table,.windowtable{ width:100%;border-collapse: collapse; margin-top:10px;}
+.result table td,.windowtable td{ border:solid 1px #ccc; padding:10px; white-space:nowrap;}
+.windowtable td{ border:none; border-bottom:solid 1px #ccc; vertical-align:middle;}
+.result table td{ padding:0;}
+.result td a{ display:block; padding:10px;}
+
+
+.window_search li{ padding-right:100px; position:relative;}
+.window_search li .btn{ width:100px; text-align:center; position:absolute; right:0; top:0; padding:10px; border-radius:0; height:41px;}
+.window_search input[type="text"]{ border-right:0; border-radius:0; height:41px;}
+
+.list2 li{ padding:15px 10px;}
+.list2 li:nth-child(2n){ background-color:white;}
+.list2 li .tt{ margin-bottom:5px; font-size:16px;}
+.list2 li .tt font{ font-size:16px;}
+
+.guzhang{ padding:15px 10px; background:url(../images/logo_background.jpg) repeat-y; background-size:100% auto; min-height:90%;}
+.guzhang .tt{ margin-top:20px;}
+
+
